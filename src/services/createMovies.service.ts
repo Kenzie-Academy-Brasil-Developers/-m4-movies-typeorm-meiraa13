@@ -1,4 +1,4 @@
-import { AppDataSource } from "../data-source";
+import  { AppDataSource }  from "../data-source";
 import { TMovie, TMovieRequest } from "../interfaces/movies.interface";
 import { Repository } from "typeorm";
 import  Movie  from '../entities/movies.entity'

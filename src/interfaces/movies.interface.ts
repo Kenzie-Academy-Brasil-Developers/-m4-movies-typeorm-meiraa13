@@ -1,9 +1,14 @@
 import { z } from "zod";
-import { movieSchema, movieRequestSchema } from "../schemas/movies.schemas";
+import { movieSchema, movieRequestSchema, moviesResponseSchema } from "../schemas/movies.schemas";
+import { DeepPartial } from "typeorm";
 
 type TMovie = z.infer<typeof movieSchema>
 
 type TMovieRequest = z.infer<typeof movieRequestSchema>
 
+type TMoviesResponse = z.infer<typeof moviesResponseSchema>
 
-export {TMovie, TMovieRequest }
+type TMovieUpdateRequest = DeepPartial<TMovieRequest>
+
+
+export {TMovie, TMovieRequest, TMoviesResponse, TMovieUpdateRequest }
